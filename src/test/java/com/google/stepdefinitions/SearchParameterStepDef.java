@@ -12,7 +12,8 @@ public class SearchParameterStepDef {
     WebDriver driver= DriverHelper.getDriver();
     GoogleMainPage googleMainPage=new GoogleMainPage(driver);
     @Given("User navigates to the {string}")
-    public void user_navigates_to_the(String url) {
+    public void user_navigates_to_the(String url) throws InterruptedException {
+        Thread.sleep(3000);
     driver.get(url);
     }
     @When("User searches for {string}")
