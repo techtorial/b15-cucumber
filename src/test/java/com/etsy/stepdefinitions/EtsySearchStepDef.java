@@ -17,5 +17,11 @@ public class EtsySearchStepDef {
     @Then("User validates the title {string} from Etsy")
     public void user_validates_the_title_from_etsy(String title) {
         Assert.assertEquals(title,driver.getTitle().trim());
+
+
+
+
+
+// We did something
     }
 }
