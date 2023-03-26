@@ -37,6 +37,9 @@ public class WebOrderFoodOrderPage {
     @FindBy(tagName = "h1")
     WebElement header;
 
+    @FindBy(xpath = "//p[contains(text(),'Your group order')]")
+    WebElement paragraph;
+
     public void clickGroupOrderAndNextButton() throws InterruptedException {
         groupOrderButton.click();
         Thread.sleep(2000);
@@ -67,6 +70,10 @@ public class WebOrderFoodOrderPage {
     public String actualHeader() throws InterruptedException {
         Thread.sleep(2000);
         return BrowserUtils.getText(header);
+    }
+
+    public boolean validateParagraph(String text){
+        return BrowserUtils.getText(paragraph).contains(text);
     }
 
 

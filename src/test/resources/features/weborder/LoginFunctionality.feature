@@ -1,9 +1,11 @@
+@regression
 Feature: Testing Login Functionality of WebOrder Page
 
+  @smoke
   Scenario: Testing positive login(correct username + correct password)
     When User provides 'guest1@microworks.com' and 'Guest1!' for WebOrder
     Then User validates the 'ORDER DETAILS - Weborder' from homepage
-
+ @fawad
   Scenario: Testing negative login(correct username + wrong password)
     When User provides 'guest1@microworks.com' and 'ahmet' for WebOrder
     Then User validates the 'Sign in Failed' error message
@@ -12,6 +14,7 @@ Feature: Testing Login Functionality of WebOrder Page
     When User provides 'ahmet@microworks.com' and 'Guest1!' for WebOrder
     Then User validates the 'Sign in Failed' error message
 
+  @smoke
   Scenario: Testing negative login(both of them are empty)
     When User provides ' ' and ' ' for WebOrder
     Then User validates the 'Sign in Failed' error message

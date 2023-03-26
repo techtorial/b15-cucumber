@@ -36,6 +36,11 @@ public class WebOrderFoodOrderStepDef {
         Assert.assertEquals(expectedHeader,webOrderFoodOrderPage.actualHeader());
     }
 
+    @Then("User validates the word {string} from description")
+    public void user_validates_the_word_from_description(String text) {
+    Assert.assertTrue(webOrderFoodOrderPage.validateParagraph(text));
+    }
+
 
 
 
