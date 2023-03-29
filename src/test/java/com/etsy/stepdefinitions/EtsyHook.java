@@ -10,16 +10,16 @@ import utils.DriverHelper;
 
 public class EtsyHook {
 
-    WebDriver driver= DriverHelper.getDriver();
-
-    @Before
-    public void setup(){
-        driver.get(ConfigReader.readProperty("etsyurl"));
-    }
-
-    @After
-    public void tearDown(Scenario scenario){
-        BrowserUtils.getScreenShotForCucumber(driver,scenario);
-      //  driver.quit();
-    }
+//    WebDriver driver= DriverHelper.getDriver();
+//
+//    @Before
+//    public void setup(){
+//        driver.get(ConfigReader.readProperty("etsyurl"));
+//    }
+//
+//    @After
+//    public void tearDown(Scenario scenario){
+//        BrowserUtils.getScreenShotForCucumber(driver,scenario);
+//      //  driver.quit();
+//    }
 }

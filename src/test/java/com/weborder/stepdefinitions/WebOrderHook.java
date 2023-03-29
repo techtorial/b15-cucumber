@@ -10,7 +10,7 @@ import utils.DriverHelper;
 
 public class WebOrderHook {
 
-    WebDriver driver= DriverHelper.getDriver();
+  //  WebDriver driver= DriverHelper.getDriver();
 
 //    @Before//it should be from cucumber
 //    public void setup(){
