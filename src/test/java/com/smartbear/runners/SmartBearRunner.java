@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/smartbear",//feature files
         glue = "com/smartbear/stepdefinitions", //step definitions
-        dryRun = true,//getting snips without executing
-        tags = "@regression",
+        dryRun = false,//getting snips without executing
+        tags = "@regression2",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt"}
         //and refers to one scenario
         //or refers to multiple scenarios

@@ -14,7 +14,13 @@ public class SmartBearMainPage {
     @FindBy(linkText = "Order")
     WebElement orderButton;
 
+    @FindBy(partialLinkText = "all orders")
+    WebElement viewAllOrdersButton;
+
     public void clickOrderButton(){
         orderButton.click();
+    }
+    public void viewAllOrdersButton(){
+        viewAllOrdersButton.click();
     }
 }

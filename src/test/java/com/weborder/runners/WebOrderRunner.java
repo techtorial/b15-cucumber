@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/weborder",//feature files
         glue = "com/weborder/stepdefinitions", //step definitions
-        dryRun = false,//getting snips without executing
+        dryRun = true,//getting snips without executing
         tags = "@regression",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt"}
         //and refers to one scenario

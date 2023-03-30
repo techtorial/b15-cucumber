@@ -7,12 +7,12 @@ Feature: Testing the account creation and validation from SmartBear
     And User provides '<name>','<street>','<city>','<state>','<zip>' for address information
     And User provides '<cardType>','<cardNumber>','<expirationDate>' for payment information
     Then User clicks process button and validate '<message>'
-   # And User validates all information '<name>','<product>','<quantity>','<date>','<street>','<city>',<state>','<zip>','<cardType>','<cardNumber>,'<expirationDate>' from table
+    And User validates all information '<name>','<product>','<quantity>','<street>','<city>','<state>','<zip>','<cardType>','<cardNumber>','<expirationDate>' from table
     Examples:
-      | product | quantity | name  | street | city    | state | zip   | cardType | cardNumber | expirationDate | message                                |
-      | MyMoney | 4        | Ahmet | midway | Chicago | IL    | 60343 | VISA     | 123342342  | 06/28          | New order has been successfully added. |
-
-
+      | product     | quantity | name   | street | city    | state   | zip    | cardType         | cardNumber | expirationDate | message                                |
+      | MyMoney     | 4        | Ahmet  | midway | Chicago | IL      | 60343  | VISA             | 123342342  | 06/28          | New order has been successfully added. |
+      | FamilyAlbum | 7        | Mehmet | ayse   | HOUSTON | TX      | 654565 | MASTERCARD       | 234234234  | 02/26          | New order has been successfully added. |
+      | ScreenSaver | 2        | Ivana  | Mahmut | MIAMI   | FLORIDA | 340023 | AMERICAN EXPRESS | 756756756  | 08/24          | New order has been successfully added. |
 
 
 
